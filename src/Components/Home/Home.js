@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useReviews from "../Hook/useReviews";
 import ReviewItems from "../ReviewItems/ReviewItems";
+import Reviews from "../Reviews/Reviews";
 const Home = () => {
   const [reviews] = useReviews();
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const Home = () => {
           Customer Reviews ({reviews.slice(0, 3).length})
         </h1>
         <div className="">
-          <div className="cards grid grid-cols-3 gap-4 items-middle ">
+          <div className="cards grid grid-cols-3 gap-4 justify-items-center my-10  ">
             {reviews.map((review) => (
               <ReviewItems key={review.id} review={review}></ReviewItems>
             ))}

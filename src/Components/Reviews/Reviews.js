@@ -1,13 +1,19 @@
 import React from "react";
-import useReviews from "../Hook/useReviews";
+import AllReviewItems from "../AllReviewItems/AllReviewItems";
+import useReview from "../Hook/useReviews";
 
 const Reviews = () => {
-  const [reviews, setReviews] = useReviews();
-  console.log(reviews);
+  const [reviews] = useReview();
   return (
     <div>
-      <h1>Welcome to reviews</h1>
-      <h1>Reviews: {reviews.length}</h1>
+      <h1 className="text-xl font-medium my-5">Welcome to reviews</h1>
+      <h1 className="text-slate-400 font-normal">Reviews: {reviews.length}</h1>
+
+      <div className="allReviewItems grid grid-cols-3 gap-4 justify-items-center my-10">
+        {reviews.map((review) => (
+          <AllReviewItems key={review.id} review={review}></AllReviewItems>
+        ))}
+      </div>
     </div>
   );
 };
