@@ -1,14 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useReviews from "../Hook/useReviews";
-
+import ReviewItems from "../ReviewItems/ReviewItems";
 const Home = () => {
-  const [reviews, setReviews] = useReviews();
+  const [reviews] = useReviews();
+  const navigate = useNavigate();
+
+  const goToReviews = () => {
+    navigate("/Reviews");
+  };
+
   return (
     <div>
       <div className="flex items-center m-10">
         <div className="w-[800px] ">
           <h1 className="text-5xl font-bold">
-            {" "}
             <span className="">
               YOUR NEXT PHONE<br></br>
             </span>
@@ -21,12 +27,10 @@ const Home = () => {
             veniam, illo magni consectetur natus labore sed! Temporibus harum
             distinctio praesentium excepturi.
           </p>
-
           <button className="bg-green-300 p-2 rounded font-bold">
             Live Demo
           </button>
         </div>
-
         <div className="w-[700px]">
           <img
             className="h-[500px]"
@@ -35,17 +39,21 @@ const Home = () => {
           />
         </div>
       </div>
-
       <div className="my-16">
         <h1 className="text-4xl font-bold">
           Customer Reviews ({reviews.slice(0, 3).length})
         </h1>
-
-        <div className="review-cards">
-          <div className="cards"></div>
+        <div className="">
+          <div className="cards grid grid-cols-3 gap-4 items-middle ">
+            {reviews.map((review) => (
+              <ReviewItems key={review.id} review={review}></ReviewItems>
+            ))}
+          </div>
         </div>
-
-        <button className="p-2 rounded bg-green-300 font-bold">
+        <button
+          onClick={goToReviews}
+          className="p-2 rounded bg-green-300 font-bold"
+        >
           See All Reviews
         </button>
       </div>
