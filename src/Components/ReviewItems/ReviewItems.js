@@ -13,7 +13,7 @@ const ReviewItems = (props) => {
         />
         <h2 className="text-xl font-bold">{name}</h2>
         <h2>
-          <span className="text-blue-700">Comments:</span> {Review}
+          <span className="text-blue-700">Reviews:</span> {Review}
         </h2>
         <h2>
           Ratings: <span className="text-blue-400">{ratting}</span>

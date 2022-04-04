@@ -32,7 +32,7 @@ const Home = () => {
             possible. Here some of our clients Reviewing our products, so it
             could be helpful.
           </p>
-          <button className="bg-green-300 p-2 rounded font-bold">
+          <button className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-sky-300  p-2 rounded text-xl font-medium text-white my-5 ">
             Live Demo
           </button>
         </div>
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
         <button
           onClick={goToReviews}
-          className="p-2 rounded bg-green-300 font-bold"
+          className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-sky-300  p-2 rounded text-xl font-medium text-white  "
         >
           See All Reviews
         </button>
