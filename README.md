@@ -1,6 +1,6 @@
 # Best Phone Review App.
 
-## Live site : [https://best-phone-review-app.netlify.app/Reviews]
+## Live site : [https://best-phone-review-app.netlify.app]
 
 ## Work's in this App :
 
