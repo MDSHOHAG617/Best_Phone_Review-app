@@ -23,11 +23,14 @@ const Home = () => {
             <span className="text-violet-500">WILL BE THE BEST PHONE!!!</span>
           </h1>
           <p className="my-3 ">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            dignissimos sint quaerat eos cumque harum ducimus id sunt illum
-            velit mollitia sapiente autem repellendus dicta iusto quasi rerum
-            veniam, illo magni consectetur natus labore sed! Temporibus harum
-            distinctio praesentium excepturi.
+            Your Next Phone Will Be The Best Phone. Because of technology is
+            changing day by day which has some good and bad side for all of us.
+            changing is good but it's too hurry to adapt with it, for this
+            reason many of us fall back. Though we changing our personal smart
+            phone after some time it's also bad for our financial condition. But
+            the thing is you should adapt with the world as much as hurry
+            possible. Here some of our clients Reviewing our products, so it
+            could be helpful.
           </p>
           <button className="bg-green-300 p-2 rounded font-bold">
             Live Demo
@@ -46,7 +49,7 @@ const Home = () => {
           Customer Reviews ({reviews.slice(0, 3).length})
         </h1>
         <div className="">
-          <div className="cards grid grid-cols-3 gap-4 justify-items-center my-10  ">
+          <div className="cards grid grid-cols-3 justify-items-center my-10  ">
             {customerReview.map((review) => (
               <ReviewItems key={review.id} review={review}></ReviewItems>
             ))}
