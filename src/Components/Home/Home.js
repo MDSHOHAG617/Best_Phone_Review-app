@@ -6,6 +6,7 @@ import Reviews from "../Reviews/Reviews";
 const Home = () => {
   const [reviews] = useReviews();
   const navigate = useNavigate();
+  let customerReview = reviews.slice(0, 3);
 
   const goToReviews = () => {
     navigate("/Reviews");
@@ -46,7 +47,7 @@ const Home = () => {
         </h1>
         <div className="">
           <div className="cards grid grid-cols-3 gap-4 justify-items-center my-10  ">
-            {reviews.map((review) => (
+            {customerReview.map((review) => (
               <ReviewItems key={review.id} review={review}></ReviewItems>
             ))}
           </div>
