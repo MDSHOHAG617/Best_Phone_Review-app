@@ -6,7 +6,7 @@ const Reviews = () => {
   const [reviews] = useReview();
   return (
     <div>
-      <h1 className="text-xl font-medium my-5">Welcome to reviews</h1>
+      <h1 className="text-3xl font-bold my-5">Welcome to reviews</h1>
       <h1 className="text-slate-400 font-normal">Reviews: {reviews.length}</h1>
 
       <div className="allReviewItems grid grid-cols-3 gap-4 justify-items-center my-10">
